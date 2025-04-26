@@ -1,0 +1,138 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px; /* Add padding for smaller screens */
+    box-sizing: border-box; /* Include padding in width/height */
+}
+
+.calculator-container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px; /* Limit maximum width */
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding and border in element's total width/height */
+    font-size: 1em;
+}
+
+.form-group input[type="number"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #28a745; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Add some space above the button */
+}
+
+button[type="submit"]:hover {
+    background-color: #218838; /* Darker green */
+}
+
+.result-display {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.1em;
+    color: #333;
+    border: 1px solid #ced4da;
+}
+
+.result-display p {
+    margin: 0;
+}
+
+.result-display span.amount {
+    font-weight: bold;
+    color: #007bff; /* Blue */
+    font-size: 1.3em;
+}
+
+.result-display span.error {
+    color: #dc3545; /* Red */
+    font-weight: bold;
+}
+
+.result-details {
+     margin-top: 15px;
+     padding: 10px;
+     background-color: #f8f9fa;
+     border-radius: 5px;
+     font-size: 0.95em;
+     color: #495057;
+     border: 1px solid #dee2e6;
+     line-height: 1.6;
+}
+
+.result-details p {
+    margin: 5px 0;
+}
+
+.result-details span {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 500px) {
+    .calculator-container {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+     .form-group input[type="number"], button[type="submit"] {
+        padding: 10px;
+        font-size: 0.95em;
+    }
+    .result-display {
+         font-size: 1em;
+    }
+     .result-display span.amount {
+        font-size: 1.2em;
+     }
+}
